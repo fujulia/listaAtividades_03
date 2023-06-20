@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+<script>
+    // Problema: Destino turístico
+    /*
+    Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
+    
+    Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
+    
+    Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo. 
+    
+    Apresente o destino final e o custo final da viagem para o destino.
+    */
+
+    // Entrada
+    const transporteSp = Number(prompt('Informe o preço do transporte aéreo para São Paulo').trim().replace(',', '.'));
+    const transporteRj = Number(prompt('Informe o preço do transporte aéreo para o Rio de Janeiro').trim().replace(',', '.'));
+    const hotelSp = Number(prompt('Informe o preço do hotel em São paulo').trim().replace(',', '.'));
+    const hotelRj = Number(prompt('Informe o preço do hotel no Rio de Janeiro').trim().replace(',', '.'));
+    const dias = Number(prompt('Quantos dias pretende ficar no destino?').trim())
+
+    // Processamento]
+    const custoSp = (transporteSp) + (hotelSp * dias);
+    const custoRj = (transporteRj) + (hotelRj * dias);
+    //Considerei que a passagem era de ida e volta!!
+
+    if( custoSp> custoRj){
+        alert(` Destino: RIO DE JANEIRO! \n Custo final: R$${custoRj.toFixed(2).replace('.',',')}.`);
+    }
+    else if(custoRj>custoSp){
+        alert(` Destino: SÃO PAULO! \n Custo final: R$${custoSp.toFixed(2).replace('.',',')}.`);
+    }
+    else{
+        alert(` Os custos são iguais! R$${custoRj.toFixed(2).replace('.',',')}.`)
+    }
+
+
+    // Saída
+
+</script>
