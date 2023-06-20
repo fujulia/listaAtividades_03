@@ -10,18 +10,18 @@
     */
 
     // Entrada
-    const valorImovel = Number(prompt('Qual o valor do imóvel?'.trim().replace(',','.')));
-    const anos = Number(prompt('Em quantos anos será realizado o financiamento?'.trim().replace(',','.')));
-    const salario = Number(prompt('Qual seu salário?').trim().replace(',','.'));
+    const valorImovel = Number(prompt('Qual o valor do imóvel?'.trim().replace(',', '.')));
+    const anos = Number(prompt('Em quantos anos será realizado o financiamento?'.trim().replace(',', '.')));
+    const salario = Number(prompt('Qual seu salário?').trim().replace(',', '.'));
     // Processamento
-    const prestação = (valorImovel/anos)/12;
-    const porcentagem = (salario*30)/100;
+    const prestação = (valorImovel / anos) / 12;
+    const porcentagem = (salario * 30) / 100;
 
-    if(prestação<=porcentagem){
-        alert(`Financiemento concedido! Valor da parcela: R$${prestação.toFixed(2).replace('.',',')}.`);
+    if (prestação <= porcentagem) {
+        alert(`Financiemento concedido! Valor da parcela: R$${prestação.toFixed(2).replace('.', ',')}.`);
     }
-    else{
-        alert(`O valor da parcela R$${prestação.toFixed(2).replace('.',',')} ultrapassa os 30% de seu sálario! Financiamento negado!`)
+    else {
+        alert(`O valor da parcela R$${prestação.toFixed(2).replace('.', ',')} ultrapassa os 30% de seu sálario! Financiamento negado!`)
     }
     // Saída
 

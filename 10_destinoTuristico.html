@@ -23,14 +23,14 @@
     const custoRj = (transporteRj) + (hotelRj * dias);
     //Considerei que a passagem era de ida e volta!!
 
-    if( custoSp> custoRj){
-        alert(` Destino: RIO DE JANEIRO! \n Custo final: R$${custoRj.toFixed(2).replace('.',',')}.`);
+    if (custoSp > custoRj) {
+        alert(` Destino: RIO DE JANEIRO! \n Custo final: R$${custoRj.toFixed(2).replace('.', ',')}.`);
     }
-    else if(custoRj>custoSp){
-        alert(` Destino: SÃO PAULO! \n Custo final: R$${custoSp.toFixed(2).replace('.',',')}.`);
+    else if (custoRj > custoSp) {
+        alert(` Destino: SÃO PAULO! \n Custo final: R$${custoSp.toFixed(2).replace('.', ',')}.`);
     }
-    else{
-        alert(` Os custos são iguais! R$${custoRj.toFixed(2).replace('.',',')}.`)
+    else {
+        alert(` Os custos são iguais! R$${custoRj.toFixed(2).replace('.', ',')}.`)
     }
 
 

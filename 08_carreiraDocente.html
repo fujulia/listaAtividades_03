@@ -25,15 +25,15 @@
     const tcc = Number(prompt('Qual a quantidade de TCCs que já orientou? ').trim());
 
     // Processamento
-    const pontos = (anos*2.5) + (projetoPesquisa*5) + (projetoExtensao*5) + (tcc*3);
+    const pontos = (anos * 2.5) + (projetoPesquisa * 5) + (projetoExtensao * 5) + (tcc * 3);
 
-    if(pontos<=30){
+    if (pontos <= 30) {
         alert('CONVIDADO!');
     }
-    else if(pontos<50){
+    else if (pontos < 50) {
         alert('AGREGADO!');
     }
-    else{
+    else {
         alert('TITULAR!');
     }
 
