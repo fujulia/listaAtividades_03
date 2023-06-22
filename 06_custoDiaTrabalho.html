@@ -17,33 +17,29 @@
     // Entrada
     const viagens = Number(prompt('Quantas viagens foram realizadas por dia?').trim());
     const cargo = prompt('Qual cargo você ocupa? Motorista ou cobrador?').trim().toLocaleLowerCase();
-
-    // Processamento
     let mensagemFinal = ""
-
+    let total
     if (cargo === 'motorista') {
         mensagemFinal = mensagemFinal + 'Cargo: Motorista.'
         if (viagens < 10 && viagens > 0) {
-            const total1 = 100 * 1.20;
-            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total1.toFixed(2).replace('.', ',')}.`;
+            total = 100 * 1.20;
+            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total.toFixed(2).replace('.', ',')}.`;
         }
         else if (viagens > 10) {
-            const total2 = 100 * 1.35;
-            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total2.toFixed(2).replace('.', ',')}.`;
+            total = 100 * 1.35;
+            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total.toFixed(2).replace('.', ',')}.`;
         }
     }
-
     else if (cargo === 'cobrador') {
         mensagemFinal = mensagemFinal + 'Cargo: Cobrador.'
         if (viagens < 10 && viagens > 0) {
             mensagemFinal = mensagemFinal + '\n Valor final recebido: R$100,00.';
         }
         else if (viagens > 10) {
-            const total3 = 100 * 1.10;
-            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total3.toFixed(2).replace('.', ',')}.`
+            total = 100 * 1.10;
+            mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total.toFixed(2).replace('.', ',')}.`
         }
     }
-
     alert(mensagemFinal);
 
     // Saída

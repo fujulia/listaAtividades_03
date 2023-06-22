@@ -23,10 +23,7 @@
     const projetoPesquisa = Number(prompt('Qual a quantidade de Projetos de Pesquisa que já coordenou?').trim());
     const projetoExtensao = Number(prompt('Qual a quantidade de Projetos de Extensão que já orientou?').trim());
     const tcc = Number(prompt('Qual a quantidade de TCCs que já orientou? ').trim());
-
-    // Processamento
     const pontos = (anos * 2.5) + (projetoPesquisa * 5) + (projetoExtensao * 5) + (tcc * 3);
-
     if (pontos <= 30) {
         alert('CONVIDADO!');
     }

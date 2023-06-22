@@ -16,27 +16,28 @@
 
     // Entrada
     const salario = Number(prompt('Insira o valor de seu salário').trim().replace(',', '.'));
-
+    let conta
+    let total
     // Processamento
     if (salario <= 2000) {
-        const conta1 = (salario * 15) / 100;
-        const total1 = salario + conta1;
-        alert(` O valor do aumento será R$${conta1.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total1.toFixed(2).replace('.', ',')}.`);
+        conta = (salario * 15) / 100;
+        total = salario + conta;
+        alert(` O valor do aumento será R$${conta.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total.toFixed(2).replace('.', ',')}.`);
     }
     else if (salario > 2000 && salario <= 4000) {
-        const conta2 = (salario * 10) / 100;
-        const total2 = salario + conta2;
-        alert(` O valor do aumento será R$${conta2.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total2.toFixed(2).replace('.', ',')}.`);
+        conta = (salario * 10) / 100;
+        total = salario + conta;
+        alert(` O valor do aumento será R$${conta.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total.toFixed(2).replace('.', ',')}.`);
     }
     else if (salario > 4000 && salario <= 7000) {
-        const conta3 = (salario * 7.5) / 100;
-        const total3 = salario + conta3;
-        alert(` O valor do aumento será R$${conta3.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total3.toFixed(2).replace('.', ',')}.`);
+        conta = (salario * 7.5) / 100;
+        total= salario + conta;
+        alert(` O valor do aumento será R$${conta.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total.toFixed(2).replace('.', ',')}.`);
     }
     else {
-        const conta4 = (salario * 5) / 100;
-        const total4 = salario + conta4;
-        alert(` O valor do aumento será R$${conta4.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total4.toFixed(2).replace('.', ',')}.`);
+        conta = (salario * 5) / 100;
+        total = salario + conta;
+        alert(` O valor do aumento será R$${conta.toFixed(2).replace('.', ',')} e o valor do novo salário será R$${total.toFixed(2).replace('.', ',')}.`);
     }
 
 
