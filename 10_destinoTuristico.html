@@ -12,19 +12,19 @@
     */
 
     // Entrada
-    const transporteSp = Number(prompt('Informe o preço do transporte aéreo para São Paulo').trim().replace(',', '.'));
-    const transporteRj = Number(prompt('Informe o preço do transporte aéreo para o Rio de Janeiro').trim().replace(',', '.'));
-    const hotelSp = Number(prompt('Informe o preço do hotel em São paulo').trim().replace(',', '.'));
-    const hotelRj = Number(prompt('Informe o preço do hotel no Rio de Janeiro').trim().replace(',', '.'));
+    const transporteSp = Number(prompt('Informe o preço do transporte aéreo para São Paulo (passagem de ida e volta):').trim().replace(',', '.'));
+    const transporteRj = Number(prompt('Informe o preço do transporte aéreo para o Rio de Janeiro (passagem de ida e volta):').trim().replace(',', '.'));
+    const hotelSp = Number(prompt('Informe o preço do hotel em São paulo:').trim().replace(',', '.'));
+    const hotelRj = Number(prompt('Informe o preço do hotel no Rio de Janeiro:').trim().replace(',', '.'));
     const dias = Number(prompt('Quantos dias pretende ficar no destino?').trim())
     const custoSp = (transporteSp) + (hotelSp * dias);
     const custoRj = (transporteRj) + (hotelRj * dias);
     //Considerei que a passagem era de ida e volta!!
     if (custoSp > custoRj) {
-        alert(` Destino: RIO DE JANEIRO! \n Custo final: R$${custoRj.toFixed(2).replace('.', ',')}.`);
+        alert(` Melhor Destino: RIO DE JANEIRO! \n Custo final: R$${custoRj.toFixed(2).replace('.', ',')}.`);
     }
     else if (custoRj > custoSp) {
-        alert(` Destino: SÃO PAULO! \n Custo final: R$${custoSp.toFixed(2).replace('.', ',')}.`);
+        alert(` Melhor Destino: SÃO PAULO! \n Custo final: R$${custoSp.toFixed(2).replace('.', ',')}.`);
     }
     else {
         alert(` Os custos são iguais! R$${custoRj.toFixed(2).replace('.', ',')}.`)

@@ -13,8 +13,8 @@
 
     // Entrada
     const salario = Number(prompt('Quanto você recebe por mês?').trim());
-    const auxilio = prompt('Você deseja receber auxílio transporte? RESPONDA SIM OU NÃO').trim().toLocaleLowerCase();
-    const veiculo = prompt('Você utiliza veículo próprio para se locomover ao trabalho? RESPONDA SIM OU NÃO').trim().toLocaleLowerCase();
+    const auxilio = prompt('Você deseja receber auxílio transporte? RESPONDA SIM OU NÃO').trim().toLowerCase();
+    const veiculo = prompt('Você utiliza veículo próprio para se locomover ao trabalho? RESPONDA SIM OU NÃO').trim().toLowerCase();
     let mensagemFinal = ""
     let total
     if (auxilio === 'sim' || veiculo === 'sim') {
@@ -33,8 +33,6 @@
         total = salario + 150;
         mensagemFinal = mensagemFinal + `\n Salário final: R$${total.toFixed(2).replace('.', ',')}.`;
     }
-
-
 
     // Saída
     alert(mensagemFinal)

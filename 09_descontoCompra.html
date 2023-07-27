@@ -13,18 +13,18 @@
 
     // Entrada
     const valor = Number(prompt('Informe o valor do computador').trim().replace(',','.'));
-    const formaPagamento = prompt(' Qual a forma de pagamento? Responda B para boleto, D para dinheiro e P para pix.').trim().toLocaleLowerCase();
+    const formaPagamento = prompt(' Qual a forma de pagamento? Responda B para boleto, D para dinheiro e P para pix.').trim().toLowerCase();
     let total
     if (formaPagamento === 'b') {
-        let total = valor - (valor * 0.03);
+        total = valor - (valor * 0.03);
         alert(` Pagando com boleto o preço final do computador é R$${total.toFixed(2).replace('.', ',')}.`)
     }
     else if (formaPagamento === 'd') {
-        let total = valor - (valor * 0.05);
+        total = valor - (valor * 0.05);
         alert(` Pagando com dinheiro o preço final do computador é R$${total.toFixed(2).replace('.', ',')}.`)
     }
     else if (formaPagamento === 'p') {
-        let total = valor - (valor * 0.10);
+        total = valor - (valor * 0.10);
         alert(` Pagando com pix o preço final do computador é R$${total.toFixed(2).replace('.', ',')}.`)
     }
     else {

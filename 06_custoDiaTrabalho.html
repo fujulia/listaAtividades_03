@@ -16,7 +16,7 @@
 
     // Entrada
     const viagens = Number(prompt('Quantas viagens foram realizadas por dia?').trim());
-    const cargo = prompt('Qual cargo você ocupa? Motorista ou cobrador?').trim().toLocaleLowerCase();
+    const cargo = prompt('Qual cargo você ocupa? Motorista ou cobrador?').trim().toLowerCase();
     let mensagemFinal = ""
     let total
     if (cargo === 'motorista') {
@@ -40,6 +40,10 @@
             mensagemFinal = mensagemFinal + `\n Valor final recebido: R$${total.toFixed(2).replace('.', ',')}.`
         }
     }
+    else{
+        mensagemFinal = 'Valor inválido!';
+    }
+    
     alert(mensagemFinal);
 
     // Saída
