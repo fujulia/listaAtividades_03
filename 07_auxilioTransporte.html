@@ -21,11 +21,11 @@
         const desconto = (salario * 0.06);
         mensagemFinal = mensagemFinal + ` Desconto: R$${desconto.toFixed(2).replace('.', ',')}.`
         if (veiculo === 'sim') {
-            let total = (salario - desconto) + 200;
+            total = (salario - desconto) + 200;
             mensagemFinal = mensagemFinal + `\n Salário final com adicional de veículo próprio: R$${total.toFixed(2).replace('.', ',')}.`;
         }
         else if (veiculo === 'não') {
-            let total = (salario - desconto) + 150;
+             total = (salario - desconto) + 150;
             mensagemFinal = mensagemFinal + `\n Salário final com adicional de transporte público: R$${total.toFixed(2).replace('.', ',')}.`;
         }
     }
